@@ -1,0 +1,42 @@
+{
+  "name": "anchor-AMM",
+  "scripts": {
+    "anchor": "cd anchor && anchor",
+    "anchor-build": "cd anchor && anchor build",
+    "anchor-localnet": "cd anchor && anchor localnet",
+    "anchor-test": "cd anchor && anchor test",
+    "build": "next build",
+    "ci": "npm run build && npm run lint && npm run format:check",
+    "dev": "next dev --turbopack",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter, Anchor Counter program",
+  "keywords": [
+    "anchor-counter",
+    "legacy",
+    "nextjs",
+    "react",
+    "solana-web3js",
+    "tailwind",
+    "typescript",
+    "wallet-adapter"
+  ],
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@solana/spl-token": "0.4.13"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3",
+    "ts-mocha": "^10.0.0",
+    "@types/bn.js": "^5.1.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.0.0",
+    "typescript": "^5.7.3"
+  }
+}
