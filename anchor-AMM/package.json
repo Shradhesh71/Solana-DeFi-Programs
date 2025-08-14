@@ -1,42 +1,41 @@
 {
-  "name": "anchor-AMM",
+  "name": "anchor-amm",
+  "version": "1.0.0",
+  "description": "Solana AMM Program with Anchor Framework",
+  "main": "index.js",
   "scripts": {
+    "test": "cd anchor && anchor test",
     "anchor": "cd anchor && anchor",
-    "anchor-build": "cd anchor && anchor build",
-    "anchor-localnet": "cd anchor && anchor localnet",
-    "anchor-test": "cd anchor && anchor test",
-    "build": "next build",
-    "ci": "npm run build && npm run lint && npm run format:check",
-    "dev": "next dev --turbopack",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "lint": "next lint",
-    "start": "next start"
+    "build": "cd anchor && anchor build",
+    "deploy": "cd anchor && anchor deploy",
+    "localnet": "cd anchor && anchor localnet",
+    "test:watch": "cd anchor && anchor test --skip-local-validator",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}'",
+    "client": "cd client && npm run dev"
   },
-  "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter, Anchor Counter program",
   "keywords": [
-    "anchor-counter",
-    "legacy",
-    "nextjs",
-    "react",
-    "solana-web3js",
-    "tailwind",
-    "typescript",
-    "wallet-adapter"
+    "solana",
+    "anchor",
+    "amm",
+    "defi"
   ],
-  "version": "0.0.0",
-  "private": true,
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "@coral-xyz/anchor": "^0.31.1",
-    "@solana/spl-token": "0.4.13"
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.90.0"
   },
   "devDependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^9.0.3",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.19.9",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
     "ts-mocha": "^10.0.0",
-    "@types/bn.js": "^5.1.0",
-    "@types/chai": "^4.3.0",
-    "@types/mocha": "^9.0.0",
-    "typescript": "^5.7.3"
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.2"
   }
 }
